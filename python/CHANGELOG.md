@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.0 (2024-03-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* :tada: first commit
+
+### Features
+
+* :tada: first commit ([daab7f5](https://github.com/Foxon-Consulting/toolkit-images/commit/daab7f5d459ea11d4ce0f9bb8525c32f26ffe3c6))
+
 ## [1.0.14](https://github.com/Foxon-Consulting/toolkit-images/compare/python-toolkit-1.0.13...python-toolkit-1.0.14) (2024-03-12)
 
 
