@@ -1,0 +1,56 @@
+name: integration
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches-ignore:
+      - "release-please--*"
+  release:
+    types:
+      - published
+
+jobs:
+  setup:
+    uses: Foxon-Consulting/github-actions/.github/workflows/setup.yml@main
+
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pre-commit
+        uses: Foxon-Consulting/github-actions/integration/common/pre-commit@main
+
+  integration:
+    needs:
+      - setup
+      - pre-commit
+    strategy:
+      matrix:
+        toolkit: [base, devops, node, python]
+    uses: Foxon-Consulting/github-actions/.github/workflows/docker_build.yml@main
+    with:
+      dockerfile-path: ${{ matrix.toolkit }}/Dockerfile
+      upload-artifact-name: ${{ contains(needs.setup.outputs.name, matrix.toolkit ) && needs.setup.outputs.name || null }}
+
+  releasing:
+    runs-on: ubuntu-latest
+    needs:
+      - integration
+    steps:
+      - name: releasing
+        uses: Foxon-Consulting/github-actions/delivery/common/release-please@main
+        with:
+          RELEASE_PLEASE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+
+  delivery:
+    uses: Foxon-Consulting/github-actions/.github/workflows/docker_delivery.yml@main
+    if: github.event_name == 'release'
+    secrets: inherit
+    needs:
+      - setup
+      - releasing
+    with:
+      download-artifact-name: ${{ needs.setup.outputs.name }}
+      deploy-image-name: ${{ needs.setup.outputs.name }}
+      deploy-image-tag: ${{ needs.setup.outputs.version }}

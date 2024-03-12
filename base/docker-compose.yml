@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  base:
+    build:
+      dockerfile: ./Dockerfile
+    image: foxonconsulting/base-toolkit:0.0.0 # x-release-please-version
+    volumes:
+      - ./:/app # For the code
+      - //var/run/docker.sock:/var/run/docker.sock # For docker in docker
+      - ~/.aws:/root/.aws # For AWS CLI
+      - ~/.ssh:/root/.ssh # For SSH
+    container_name: base-toolkit_cn
+    tty: true
+    stdin_open: true
