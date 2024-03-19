@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Foxon-Consulting/toolkit-images/compare/python-toolkit-1.0.0...python-toolkit-1.0.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* :heavy_plus_sign: add docker-compose in all images ([#3](https://github.com/Foxon-Consulting/toolkit-images/issues/3)) ([f50faad](https://github.com/Foxon-Consulting/toolkit-images/commit/f50faadff40304702904fc4b113a9fb4121ffb6f))
+
 ## 1.0.0 (2024-03-12)
 
 
