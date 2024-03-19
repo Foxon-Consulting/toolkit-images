@@ -1,4 +1,4 @@
-FROM foxonconsulting/base-toolkit:1.0.0
+FROM foxonconsulting/base-toolkit:1.1.0
 
 # Install Ansible
 RUN apk add --update --no-cache openssh-client sshpass py3-pip
