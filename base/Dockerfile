@@ -20,6 +20,7 @@ RUN apk add make
 
 # Install Docker
 RUN apk add --update --no-cache docker-cli
+RUN apk add --update --no-cache docker-compose
 
 # Get a nice prompt
 ENV PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[36m\] -\[\033[36m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\[\033[00m\] $ "

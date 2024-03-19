@@ -2,7 +2,8 @@
   "peacock.color": "#ff3d00",
   "conventionalCommits.scopes": [
     "python",
-    "devops"
+    "devops",
+    "base"
   ],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#ff6433",
