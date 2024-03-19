@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Foxon-Consulting/toolkit-images/compare/base-toolkit-1.0.0...base-toolkit-1.1.0) (2024-03-19)
+
+
+### Features
+
+* **base:** :heavy_plus_sign: add docker-compose in base-toolkit image ([b0c0157](https://github.com/Foxon-Consulting/toolkit-images/commit/b0c015765da88033e1e643a2ccb65e7fa3e33130))
+
 ## 1.0.0 (2024-03-12)
 
 
