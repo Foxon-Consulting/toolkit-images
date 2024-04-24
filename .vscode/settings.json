@@ -3,7 +3,8 @@
   "conventionalCommits.scopes": [
     "python",
     "devops",
-    "base"
+    "base",
+    "langchain"
   ],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#ff6433",
