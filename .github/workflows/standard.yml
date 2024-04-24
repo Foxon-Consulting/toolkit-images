@@ -27,11 +27,11 @@ jobs:
       - pre-commit
     strategy:
       matrix:
-        toolkit: [base]
+        toolkit: [langchain]
     uses: Foxon-Consulting/github-actions/.github/workflows/docker_build.yml@main
     with:
       dockerfile-path: ${{ matrix.toolkit }}/Dockerfile
-      upload-artifact-name: ${{ contains(needs.setup.outputs.name, matrix.toolkit ) && needs.setup.outputs.name || null }}
+      # upload-artifact-name: ${{ contains(needs.setup.outputs.name, matrix.toolkit ) && needs.setup.outputs.name || null }}
 
   releasing:
     runs-on: ubuntu-latest
