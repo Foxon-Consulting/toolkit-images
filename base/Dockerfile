@@ -15,9 +15,6 @@ RUN git config --global core.autocrlf true
 # Install Bourne Again Shell
 RUN apk add --no-cache bash
 
-# Install make
-RUN apk add make
-
 # Install Docker
 RUN apk add --update --no-cache docker-cli
 RUN apk add --update --no-cache docker-compose
