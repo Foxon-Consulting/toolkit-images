@@ -3,7 +3,7 @@ FROM python:3.11
 
 # # Install necessary packages
 RUN apt-get update -y
-    
+
 RUN apt-get install -y sudo git ssh python3 curl make npm pip
 
 RUN npm i release-please -g
