@@ -9,48 +9,23 @@
   "packages": {
     "base": {
       "package-name": "base-toolkit",
-      "extra-files": [
-        {
-          "type": "generic",
-          "files": ["base/docker-compose.yml", "base/README.md"]
-        }
-      ]
+      "extra-files": ["base/docker-compose.yml", "base/README.md"]
     },
     "devops": {
       "package-name": "devops-toolkit",
-      "extra-files": [
-        {
-          "type": "generic",
-          "files": ["devops/docker-compose.yml", "devops/README.md"]
-        }
-      ]
+      "extra-files": ["devops/docker-compose.yml", "devops/README.md"]
     },
     "node": {
       "package-name": "node-toolkit",
-      "extra-files": [
-        {
-          "type": "generic",
-          "files": ["node/docker-compose.yml", "node/README.md"]
-        }
-      ]
+      "extra-files": ["node/docker-compose.yml", "node/README.md"]
     },
     "python": {
       "package-name": "python-toolkit",
-      "extra-files": [
-        {
-          "type": "generic",
-          "files": ["python/docker-compose.yml", "python/README.md"]
-        }
-      ]
+      "extra-files": ["python/docker-compose.yml", "python/README.md"]
     },
     "langchain": {
       "package-name": "langchain-toolkit",
-      "extra-files": [
-        {
-          "type": "generic",
-          "files": ["langchain/docker-compose.yml", "langchain/README.md"]
-        }
-      ]
+      "extra-files": ["langchain/docker-compose.yml", "langchain/README.md"]
     },
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
   }
