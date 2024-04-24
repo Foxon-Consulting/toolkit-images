@@ -1,7 +1,7 @@
 {
-  "base": "1.1.0",
+  "base": "1.2.0",
   "python": "1.0.1",
   "node": "1.0.1",
   "devops": "1.0.1",
-  "langchain": "0.0.0"
+  "langchain": "1.0.0"
 }
