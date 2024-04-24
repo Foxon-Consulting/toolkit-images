@@ -27,7 +27,7 @@ jobs:
       - pre-commit
     strategy:
       matrix:
-        toolkit: [base, devops, node, python, langchain]
+        toolkit: [langchain]
     uses: Foxon-Consulting/github-actions/.github/workflows/docker_build.yml@main
     with:
       dockerfile-path: ${{ matrix.toolkit }}/Dockerfile
